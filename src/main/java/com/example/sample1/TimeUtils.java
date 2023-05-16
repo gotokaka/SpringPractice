@@ -8,6 +8,6 @@ public class TimeUtils {
     LocalDateTime nowTime = LocalDateTime.now();
     DateTimeFormatter formattingTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mmです");
     String formattedTime = formattingTime.format(nowTime);
-    return "Hello World!! 現在日時は" + formattedTime;
+    return "現在日時は" + formattedTime;
   }
 }
