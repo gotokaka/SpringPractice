@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldSpringController {
-  @GetMapping("/morning")
+  @GetMapping("/greeting")
   public Greeting hello(@RequestParam(value = "country", defaultValue = "japan") String country) {
     Greeting greeting = new Greeting();
     // 挨拶メッセージの設定
@@ -15,8 +15,6 @@ public class HelloWorldSpringController {
     switch (country) {
       case "japan" -> greeting.setMessage("こんにちは!");
       case "us" -> greeting.setMessage("Hello!");
-      case "france" -> greeting.setMessage("Bonjour!");
-      case "korea" -> greeting.setMessage("안녕하세요!");
       default -> greeting.setMessage("こんにちは!");
     }
 
