@@ -1,18 +1,9 @@
 package com.example.sample1;
 
 public class Greeting {
-  private String country;
   private String message;
 
-  private String messageWithTime;
-
-  public String getCountry() {
-    return this.country;
-  }
-
-  public void setCountry(String country) {
-    this.country = country;
-  }
+  private String greetingMessage;
 
   public String getMessage() {
     return this.message;
@@ -22,11 +13,11 @@ public class Greeting {
     this.message = message;
   }
 
-  public String getMessageWithTime() {
-    return this.messageWithTime;
+  public String getGreetingMessage() {
+    return this.greetingMessage;
   }
 
-  public void setMessageWithTime(String messageWithTime) {
-    this.messageWithTime = messageWithTime;
+  public void setGreetingMessage(String greetingMessage) {
+    this.greetingMessage = greetingMessage;
   }
 }
