@@ -23,7 +23,7 @@ public class HelloWorldSpringController {
       greeting.setMessage("Hello world");
     }
 
-    String formattedTime = TimeUtils.nowTime();
+    String formattedTime = TimeUtils.currentDateTime();
     String messageWithTime = greetingMessage + formattedTime;
     greeting.setMessageWithTime(messageWithTime);
 
