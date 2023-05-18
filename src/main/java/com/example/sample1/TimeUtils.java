@@ -11,19 +11,20 @@ public class TimeUtils {
     return formattedTime;
   }
 
-  public static String getGreetingMessage(String formattedTime) {
+  public static String getMessage(String formattedTime) {
     int hour = Integer.parseInt(formattedTime.substring(11, 13));
 
-    String greetingMessage;
+    //greetingMessage変数を使用しないのでgreetingMessageからmessageへ変更
+    String message;
     if (hour >= 6 && hour < 12) {
-      greetingMessage = "おはようございます！";
-    } else if (hour >= 12 && hour < 17) {
-      greetingMessage = "こんにちは！";
-    } else if (hour >= 17 && hour < 24) {
-      greetingMessage = "こんばんは！";
+      message = "おはようございます！";
+    } else if (hour >= 12 && hour < 18) {
+      message = "こんにちは！";
+    } else if (hour >= 18 && hour < 24) {
+      message = "こんばんは！";
     } else {
-      greetingMessage = "おやすみなさい！";
+      message = "おやすみなさい！";
     }
-    return greetingMessage;
+    return message;
   }
 }
