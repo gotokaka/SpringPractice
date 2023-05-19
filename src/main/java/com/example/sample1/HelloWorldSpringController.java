@@ -3,6 +3,8 @@ package com.example.sample1;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 public class HelloWorldSpringController {
   @GetMapping("/greeting")
@@ -10,9 +12,7 @@ public class HelloWorldSpringController {
     Greeting greeting = new Greeting();
     String formattedTime = TimeUtils.currentDateTime();
     String message = TimeUtils.getMessage(formattedTime);
-
-    //greetingMessage変数は使わない。
-    //greeting.setGreetingMessage(greetingMessage);
+    LocalDateTime nowTime = LocalDateTime.now();
 
     greeting.setMessage(message + " 現在日時(日本)は" + formattedTime);
 
