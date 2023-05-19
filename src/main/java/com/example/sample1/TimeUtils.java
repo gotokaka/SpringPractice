@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class TimeUtils {
-  public static String getTimeMessage() {
-    LocalDateTime nowTime = LocalDateTime.now();
+  //getTimeMessageの引数にLocalDateTime nowTimeを入れる
+  public static String getTimeMessage(LocalDateTime nowTime) {
     DateTimeFormatter formattingTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mmです");
     String formattedTime = formattingTime.format(nowTime);
     return formattedTime;

@@ -11,10 +11,10 @@ public class HelloWorldSpringController {
   public Greeting hello() {
     //Greetingクラスのインスタンス生成
     Greeting greeting = new Greeting();
-
-
+    //現在日時を取得するnowTime変数
     LocalDateTime nowTime = LocalDateTime.now();
-    String formattedTime = TimeUtils.getTimeMessage();
+    //getTimeMessageの引数にnowTimeを入れる
+    String formattedTime = TimeUtils.getTimeMessage(nowTime);
     String message = TimeUtils.getGreeting(formattedTime);
 
     //greetingクラスのsetMessageメソッドを使う
