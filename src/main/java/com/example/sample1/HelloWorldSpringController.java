@@ -9,11 +9,15 @@ import java.time.LocalDateTime;
 public class HelloWorldSpringController {
   @GetMapping("/greeting")
   public Greeting hello() {
+    //Greetingクラスのインスタンス生成
     Greeting greeting = new Greeting();
-    String formattedTime = TimeUtils.currentDateTime();
-    String message = TimeUtils.getMessage(formattedTime);
-    LocalDateTime nowTime = LocalDateTime.now();
 
+
+    LocalDateTime nowTime = LocalDateTime.now();
+    String formattedTime = TimeUtils.getTimeMessage();
+    String message = TimeUtils.getGreeting(formattedTime);
+
+    //greetingクラスのsetMessageメソッドを使う
     greeting.setMessage(message + " 現在日時(日本)は" + formattedTime);
 
     return greeting;

@@ -4,17 +4,17 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class TimeUtils {
-  public static String currentDateTime() {
+  public static String getTimeMessage() {
     LocalDateTime nowTime = LocalDateTime.now();
     DateTimeFormatter formattingTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mmです");
     String formattedTime = formattingTime.format(nowTime);
     return formattedTime;
   }
 
-  public static String getMessage(String formattedTime) {
+  public static String getGreeting(String formattedTime) {
+    //取得した時刻(文字列)より部分的に取り出して数値に変換する。
     int hour = Integer.parseInt(formattedTime.substring(11, 13));
-
-    
+    //条件分岐
     String message;
     if (hour >= 6 && hour < 12) {
       message = "おはようございます！";
