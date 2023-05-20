@@ -11,9 +11,9 @@ public class TimeUtils {
     return formattedTime;
   }
 
-  public static String getGreeting(String formattedTime) {
-    //取得した時刻(文字列)より部分的に取り出して数値に変換する。
-    int hour = Integer.parseInt(formattedTime.substring(11, 13));
+  public static String getGreeting(LocalDateTime nowTime) {
+    //取得した日時より時間のみ取得する。
+    int hour = nowTime.getHour();
     //条件分岐
     String message;
     if (hour >= 6 && hour < 12) {

@@ -15,7 +15,7 @@ public class HelloWorldSpringController {
     LocalDateTime nowTime = LocalDateTime.now();
     //getTimeMessageの引数にnowTimeを入れる
     String formattedTime = TimeUtils.getTimeMessage(nowTime);
-    String message = TimeUtils.getGreeting(formattedTime);
+    String message = TimeUtils.getGreeting(nowTime);
 
     //greetingクラスのsetMessageメソッドを使う
     greeting.setMessage(message + " 現在日時(日本)は" + formattedTime);
